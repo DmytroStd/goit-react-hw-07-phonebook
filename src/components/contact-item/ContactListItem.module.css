@@ -1,0 +1,34 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    align-content: center;
+    width: 190px;
+    margin-bottom: 3px;
+    padding-left: 5px;
+    border-radius: 2px;
+    border-color: b9ec66;
+    color: aliceblue;
+    box-shadow: 0px 0px 7px 0px orangered;
+    border: 1px;
+    margin-bottom: 10px;
+    background-color: rgb(12, 12, 125);
+}
+
+.btn {
+    border-radius: 2px;
+    border: inherit;
+    padding: 3px;
+    font-size: 10px;
+    background-color: rgb(75, 5, 5);
+    color: orangered;
+    border: 1px;
+    border-color: aliceblue;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
