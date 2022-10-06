@@ -20,6 +20,7 @@ import Container from './container/Container';
 import { HeroTitle } from './titles/HeroTitle';
 import { SecondaryTitle } from './titles/SecondaryTitle';
 import { Loading } from './titles/Loading';
+import styles from '../components/contact-list/ContactList.module.css';
 
 const App = () => {
   const contacts = useSelector(getContacts);
@@ -48,8 +49,17 @@ const App = () => {
     <Container>
       <HeroTitle />
       <Form onSubmit={addContact} contacts={contacts} />
-      <SecondaryTitle />
-      <Filter value={filter} onChange={changeFilter} />
+      {/* <SecondaryTitle /> */}
+      {contacts.length > 0 ? (
+        <>
+          <SecondaryTitle /> <Filter value={filter} onChange={changeFilter} />
+        </>
+      ) : (
+        <div>
+          <p className={styles.text}>your phonebook is empty</p>
+        </div>
+      )}
+      {/* <Filter value={filter} onChange={changeFilter} /> */}
       {!loading && contacts.length > 0 && (
         <ContactList
           contacts={filtredContacts}
